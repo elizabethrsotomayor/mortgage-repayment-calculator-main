@@ -3,4 +3,5 @@
     display: flex;
     align-self: center;
     justify-content: space-between;
+    background-color: white;
 }

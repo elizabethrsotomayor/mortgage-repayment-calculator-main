@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'PlusJakartaSans-Bold';
+  src: url('/assets/fonts/static/PlusJakartaSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Medium';
+  src: url('/assets/fonts/static/PlusJakartaSans-Medium.ttf');
+}
+
 *,
 *::before,
 *::after {
@@ -16,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: 'PlusJakartaSans-Medium';
 }
 
 img,
