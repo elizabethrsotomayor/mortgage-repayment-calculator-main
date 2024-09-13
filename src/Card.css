@@ -1,7 +1,11 @@
-.card {
-    width: 40vw;
-    display: flex;
-    align-self: center;
-    justify-content: space-between;
-    background-color: white;
+@media screen and (min-width: 52rem) {
+    .card {
+        width: 40vw;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        background-color: white;
+        /* padding: 1rem; */
+        border-radius: 1rem;
+    }
 }

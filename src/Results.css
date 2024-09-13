@@ -1,0 +1,5 @@
+.results {
+    background-color: hsl(202, 55%, 16%);
+    z-index: 4;
+    border-radius: 0 1rem 1rem 1rem;
+}

@@ -1,0 +1,72 @@
+@media screen and (min-width: 52rem) {
+    .calculator-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .heading-clear-container {
+        display: flex;
+        gap: 2rem;
+        align-content: space-between;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    .clear-all-btn {
+        background: none !important;
+        border: none;
+        padding: 0 !important;
+        /*optional*/
+        font-family: 'PlusJakartaSans-Medium', sans-serif;
+        /*input has OS specific font-family*/
+        color: #069;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .form-labels {
+        color: #757575;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-fields {
+        height: 3rem;
+        border: 1px solid hsl(200, 24%, 40%);
+        border-radius: 0.5rem;
+    }
+
+    .text-field-amt {
+        /* background-color: hsl(202, 86%, 94%); */
+        /* background-image: url('../assets/images/attach_money_24dp_4E6E7E_FILL0_wght400_GRAD0_opsz24.png'),
+            linear-gradient(to right, hsl(202, 86%, 94%), white); */
+        background-image: url('../assets/images/attach_money_24dp_4E6E7E_FILL0_wght400_GRAD0_opsz24.png');
+        background-size: 1.6rem;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+        /* background-image: url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif"), linear-gradient(to right, white 70%, gray 70%, gray 71%, lightgray 71%, lightgray 100%); */
+    }
+
+    .term-rate-container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .mortgage-type-radio-btns {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}

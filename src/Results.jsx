@@ -1,7 +1,11 @@
+import './Results.css'
+
 function Results() {
   return (
     <>
-      <h2>REsults go here</h2>
+      <div className="results">
+        <img src="../assets/images/illustration-empty.svg" alt="" />
+      </div>
     </>
   )
 }
