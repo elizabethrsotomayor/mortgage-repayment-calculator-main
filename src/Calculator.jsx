@@ -19,11 +19,17 @@ function Calculator() {
           <div className="term-rate-container">
             <div className="form-section">
               <label htmlFor="mortgage-term" className="form-labels">Mortgage Term</label>
-              <input type="text" name="mortgage-term" id="mortgage-term" className="text-fields" required />
+              <label data-domain="years" className="term-rate-label">
+              <input type="text" className="text-fields text-field-term" id="mortgage-term" required/>
+              </label>
             </div>
             <div className="form-section">
-              <label htmlFor="interest-rate" className="form-labels">Interest Rate</label>
-              <input type="text" name="interest-rate" id="interest-rate" className="text-fields" required />
+              {/* <label htmlFor="interest-rate" className="form-labels">Interest Rate</label>
+              <input type="text" name="interest-rate" id="interest-rate" className="text-fields" required /> */}
+              <label htmlFor="mortgage-rate" className="form-labels">Interest Rate</label>
+              <label data-domain="%" className="term-rate-label">
+              <input type="text" className="text-fields text-field-term text-field-rate" id="interest-rate" required/>
+              </label>
             </div>
           </div>
 
