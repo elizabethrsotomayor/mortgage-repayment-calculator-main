@@ -45,19 +45,40 @@
         border-radius: 0.5rem;
     }
 
+    .static-overlay-labels {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .static-overlay-labels::after {
+        content: attr(data-domain);
+        position: absolute;
+        font-family: "PlusJakartaSans-Medium";
+        font-size: 1rem;
+        display: block;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: bold;
+    }
+
+    .mortgage-amount-label::after {
+        top: 15px;
+        left: 10px;
+    }
+
     .text-field-amt {
-        background-image: url('../assets/images/attach_money_24dp_4E6E7E_FILL0_wght400_GRAD0_opsz24.png'),
-            linear-gradient(to right, hsl(202, 86%, 94%) 0% 100%);
-        /* background-image: url('../assets/images/attach_money_24dp_4E6E7E_FILL0_wght400_GRAD0_opsz24.png'); */
-        background-size: 1.8rem;
-        background-position: 0;
-        background-repeat: no-repeat;
-        padding-left: 35px;
+        width: 100%;
     }
 
     .term-rate-container {
         display: flex;
         gap: 1rem;
+    }
+
+    .text-field-amount {
+        background-image: linear-gradient(to right, hsl(202, 86%, 94%) 0% 12%, white 12% 100%);
+        padding-left: 3.1rem;
+        width: 100%;
     }
 
     .text-field-term {
@@ -71,23 +92,18 @@
 
     .term-rate-label,
     .text-field-term {
-        position: relative;
-        display: block;
         padding-right: 0;
         width: 180px;
-        box-sizing: border-box;
     }
     
     .term-rate-label::after {
-        content: attr(data-domain);
-        position: absolute;
         top: 10px;
         right: 15px;
-        font-family: "PlusJakartaSans-Medium";
-        font-size: 1rem;
-        display: block;
-        color: rgba(0, 0, 0, 0.6);
-        font-weight: bold;
+    }
+
+    .mortgage-amount-label::after {
+        left: 15px;
+        top: 10px;
     }
 
     .mortgage-type-radio-btns {
@@ -96,5 +112,17 @@
         padding: 0;
         display: flex;
         flex-direction: column;
+    }
+
+    .mortgage-type-label {
+        margin-left: 0.5rem;
+        font-family: 'PlusJakartaSans-Bold', sans-serif;
+    }
+
+    .radio-btns {
+        border: 1px solid hsl(200, 24%, 40%);
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
     }
 }
