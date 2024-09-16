@@ -1,6 +1,6 @@
 @media screen and (min-width: 52rem) {
     .card {
-        width: 40vw;
+        width: 55vw;
         display: flex;
         align-self: center;
         justify-content: space-between;

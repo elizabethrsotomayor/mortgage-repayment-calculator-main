@@ -1,5 +1,19 @@
 .results {
     background-color: hsl(202, 55%, 16%);
-    z-index: 4;
     border-radius: 0 1rem 1rem 1rem;
+    text-align: center;
+    padding: 5rem 2rem 0 2rem;
+}
+
+.results-empty-img {
+    margin: auto;
+}
+
+.results-empty-heading {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.results-empty-paragraph {
+    color: hsl(202, 86%, 94%);
 }

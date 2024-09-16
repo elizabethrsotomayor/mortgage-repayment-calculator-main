@@ -12,9 +12,6 @@ function Calculator() {
 
         <form action="" method="get" className="mortgage-form">
           <div className="form-section">
-            {/* <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
-            <input type="text" name="mortgage-amount" id="mortgage-amount" className="text-fields text-field-amt" required /> */}
-
             <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
             <label data-domain="$" className="static-overlay-labels mortgage-amount-label">
             <input type="text" className="text-fields text-field-amount" id="mortgage-amount" required/>
@@ -51,7 +48,10 @@ function Calculator() {
           </div>
 
           <div className="form-section">
-            <input type="submit" value="Calculate Repayments" />
+            <button class="submit-btn">
+              <img className='calculator-icon' src="../assets/images/icon-calculator.svg" alt="calculator icon"/>
+              Calculate Repayments
+            </button>
           </div>
       </form>
 
