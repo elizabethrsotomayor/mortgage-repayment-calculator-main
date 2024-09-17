@@ -1,6 +1,15 @@
 import './Calculator.css';
+import { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 
 function Calculator() {
+  const [amount, setAmount] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(`The amount entered is: ${amount}`);
+  }
+
   return (
     <>
       <div className="calculator-container">
@@ -10,11 +19,11 @@ function Calculator() {
           <input type="reset" value="Clear All" className='clear-all-btn' />
         </div>
 
-        <form action="" method="get" className="mortgage-form">
+        <form onSubmit={handleSubmit} action="" method="get" className="mortgage-form">
           <div className="form-section">
             <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
             <label data-domain="$" className="static-overlay-labels mortgage-amount-label">
-            <input type="text" className="text-fields text-field-amount" id="mortgage-amount" required/>
+            <input type="text" className="text-fields text-field-amount" id="mortgage-amount" value={amount} onChange={(e) => setAmount(e.target.value)} required/>
             </label>
           </div>
 
@@ -36,8 +45,8 @@ function Calculator() {
           <div className="form-section">
             <fieldset className='mortgage-type-radio-btns'>
               <legend className="form-labels">Mortgage Type</legend>
-              <div className="radio-btns">
-                <input type="radio" name="mortgage-type" value="repayment" />
+              <div className="radio-btns radio-btn-active">
+                <input type="radio" name="mortgage-type" value="repayment" className='active-radio' />
                 <label htmlFor='repayment' className="mortgage-type-label"> Repayment</label>
               </div>
               <div className="radio-btns">
@@ -48,7 +57,7 @@ function Calculator() {
           </div>
 
           <div className="form-section">
-            <button class="submit-btn">
+            <button className="submit-btn">
               <img className='calculator-icon' src="../assets/images/icon-calculator.svg" alt="calculator icon"/>
               Calculate Repayments
             </button>
