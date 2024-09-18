@@ -4,23 +4,14 @@ import ReactDOM from 'react-dom/client';
 
 function Calculator() {
   const [amount, setAmount] = useState("");
-
-  // Handle change of radio buttons
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    // prints input radio btn itself
-    console.log(e.target);
-
-    console.log(`${name} : ${value}`);
-  };
+  const [mortgageType, setType] = useState();
 
   // Handle submission of calculator form
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`The amount entered is: ${amount}`);
   }
-
+  
   return (
     <>
       <div className="calculator-container">
@@ -56,12 +47,12 @@ function Calculator() {
           <div className="form-section">
             <fieldset className='mortgage-type-radio-btns'>
               <legend className="form-labels">Mortgage Type</legend>
-              <div className="radio-btns radio-btn-active" onChange={handleChange}>
-                <input type="radio" name="mortgage-type" value="repayment" className='active-radio' />
+              <div className={mortgageType === "repayment" ? "radio-btns radio-btn-active" : "radio-btns"} onChange={(e) => setType(e.target.value)}>
+                <input type="radio" name="mortgage-type" value="repayment" className={mortgageType === "repayment" ? "active-radio" : ""} />
                 <label htmlFor='repayment' className="mortgage-type-label"> Repayment</label>
               </div>
-              <div className="radio-btns" onChange={handleChange}>
-                <input type="radio" name="mortgage-type" value="interest-only" />
+              <div className={mortgageType === "interest-only" ? "radio-btns radio-btn-active" : "radio-btns"} onChange={(e) => setType(e.target.value)}>
+                <input type="radio" name="mortgage-type" value="interest-only" className={mortgageType === "interest-only" ? "active-radio" : ""} />
                 <label htmlFor='interest-only' className='mortgage-type-label'> Interest Only</label>
               </div>
             </fieldset>
