@@ -2,14 +2,19 @@ import './Calculator.css';
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Calculator() {
-  const [amount, setAmount] = useState("");
+function Calculator(submitted) {
+  const [mortgageAmount, setMortgageAmount] = useState("");
+  const [mortgageTerm, setMortgageTerm] = useState("");
+  const [interestRate, setInterestRate] = useState("");
   const [mortgageType, setType] = useState();
 
   // Handle submission of calculator form
   const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(`The amount entered is: ${amount}`);
+    event.preventDefault();    
+    console.log(`The mortgage amount entered is: ${mortgageAmount}`);
+    console.log(`The mortgage term entered is: ${mortgageTerm}`);
+    console.log(`The interest rate entered is: ${interestRate}`);
+    console.log(`The mortgage type is: ${mortgageType}`);
   }
   
   return (
@@ -25,7 +30,7 @@ function Calculator() {
           <div className="form-section">
             <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
             <label data-domain="$" className="static-overlay-labels mortgage-amount-label">
-            <input type="text" className="text-fields text-field-amount" id="mortgage-amount" value={amount} onChange={(e) => setAmount(e.target.value)} required/>
+            <input type="text" className="text-fields text-field-amount" id="mortgage-amount" value={mortgageAmount} onChange={(e) => setMortgageAmount(e.target.value)} required/>
             </label>
           </div>
 
@@ -33,13 +38,13 @@ function Calculator() {
             <div className="form-section">
               <label htmlFor="mortgage-term" className="form-labels">Mortgage Term</label>
               <label data-domain="years" className="static-overlay-labels term-rate-label">
-              <input type="text" className="text-fields text-field-term" id="mortgage-term" required/>
+              <input type="text" className="text-fields text-field-term" id="mortgage-term" value={mortgageTerm} onChange={(e) => setMortgageTerm(e.target.value)} required/>
               </label>
             </div>
             <div className="form-section">
               <label htmlFor="mortgage-rate" className="form-labels">Interest Rate</label>
               <label data-domain="%" className="static-overlay-labels term-rate-label">
-              <input type="text" className="text-fields text-field-term text-field-rate" id="interest-rate" required/>
+              <input type="text" className="text-fields text-field-term text-field-rate" id="interest-rate" value={interestRate} onChange={(e) => setInterestRate(e.target.value)} required/>
               </label>
             </div>
           </div>
@@ -64,7 +69,7 @@ function Calculator() {
               Calculate Repayments
             </button>
           </div>
-      </form>
+        </form>
 
       </div>
     </>
