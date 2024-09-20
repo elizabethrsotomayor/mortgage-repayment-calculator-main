@@ -1,9 +1,6 @@
 import './Results.css'
 
-function Results() {
-  // TODO: pass submitted state down from parent via props
-  const submitted = true;
-    
+function Results({submitted}) {    
   return (
     <>
       <div style={{display: submitted ? "none" : "block"}} className="results results-empty">

@@ -5,7 +5,7 @@ import Card from './Card';
 function App() {
   return (
     <>
-      <Card submitted="false"/>
+      <Card/>
     </>
   )
 }

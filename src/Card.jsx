@@ -1,13 +1,16 @@
 import Calculator from "./Calculator"
 import Results from "./Results"
+import { useState } from "react"
 import "./Card.css"
 
 function Card() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <>
       <div role="main" className='card'>
-        <Calculator/>
-        <Results/>
+        <Calculator submitted={submitted} setSubmit={() => setSubmitted(true)}/>
+        <Results submitted={submitted}/>
       </div>
     </>
   )

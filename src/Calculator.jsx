@@ -2,15 +2,17 @@ import './Calculator.css';
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Calculator(submitted) {
+function Calculator({submitted, setSubmit}) {
   const [mortgageAmount, setMortgageAmount] = useState("");
   const [mortgageTerm, setMortgageTerm] = useState("");
   const [interestRate, setInterestRate] = useState("");
   const [mortgageType, setType] = useState();
 
   // Handle submission of calculator form
-  const handleSubmit = (event) => {
-    event.preventDefault();    
+  const handleSubmit = (event) => {    
+    event.preventDefault();
+    setSubmit();
+    
     console.log(`The mortgage amount entered is: ${mortgageAmount}`);
     console.log(`The mortgage term entered is: ${mortgageTerm}`);
     console.log(`The interest rate entered is: ${interestRate}`);
