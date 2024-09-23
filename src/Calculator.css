@@ -18,15 +18,15 @@
     }
 
     .clear-all-btn {
-        background: none !important;
+        background: none;
+        color: inherit;
         border: none;
-        padding: 0 !important;
-        /*optional*/
-        font-family: 'PlusJakartaSans-Medium', sans-serif;
-        /*input has OS specific font-family*/
-        color: #069;
-        text-decoration: underline;
+        padding: 0;
+        font: inherit;
         cursor: pointer;
+        outline: inherit;
+        text-decoration: underline;
+        color: hsl(200, 26%, 54%);
     }
 
     .clear-all-btn:hover {

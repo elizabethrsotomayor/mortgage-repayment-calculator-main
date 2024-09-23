@@ -17,7 +17,7 @@ function Card() {
       <div role="main" className='card'>
         <Calculator 
           submitted={submitted} 
-          setSubmit={() => setSubmitted(true)} 
+          setSubmit={setSubmitted} 
           mortgageAmt={mortgageAmount} 
           setMortgageAmt={(e) => setMortgageAmount(e.target.value)}
           term={mortgageTerm}

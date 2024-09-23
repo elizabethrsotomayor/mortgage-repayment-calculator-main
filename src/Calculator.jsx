@@ -5,7 +5,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
   // Handle submission of calculator form
   const handleSubmit = (event) => {    
     event.preventDefault();
-    setSubmit();
+    setSubmit(true);
 
     let monthlyPayment;
     const interestRatePercent = rate / 100;
@@ -21,6 +21,10 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
     monthlyTotal = setMonthlyTotal(monthlyPayment);
     totalRepayment = setTotalRepayment(repayTotal);
   }
+
+  const resetForm = () => {
+    setSubmit(false);
+  }
   
   return (
     <>
@@ -28,10 +32,11 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
 
         <div className="heading-clear-container">
           <h1 className="heading">Mortgage Calculator</h1>
-          <input type="reset" value="Clear All" className='clear-all-btn' />
+          <input type="reset" value="Clear All" onClick={resetForm} className='clear-all-btn'/>
         </div>
 
         <form onSubmit={handleSubmit} action="" method="get" className="mortgage-form">
+
           <div className="form-section">
             <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
             <label data-domain="$" className="static-overlay-labels mortgage-amount-label">
