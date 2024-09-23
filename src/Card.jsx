@@ -19,13 +19,13 @@ function Card() {
           submitted={submitted} 
           setSubmit={setSubmitted} 
           mortgageAmt={mortgageAmount} 
-          setMortgageAmt={(e) => setMortgageAmount(e.target.value)}
+          setMortgageAmt={setMortgageAmount}
           term={mortgageTerm}
-          setTerm={(e) => setMortgageTerm(e.target.value)}
+          setTerm={setMortgageTerm}
           rate={interestRate}
-          setRate={(e) => setInterestRate(e.target.value)}
+          setRate={setInterestRate}
           type={mortgageType}
-          setMortgageType={(e) => setType(e.target.value)}
+          setMortgageType={setType}
           monthlyTotal={monthlyTotal}
           setMonthlyTotal={setMonthlyTotal}
           totalRepayment={totalRepayment}
