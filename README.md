@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Mortgage Repayment Calculator Github](https://github.com/elizabethrsotomayor/mortgage-repayment-calculator-main)
+- Live Site URL: [Mortgage Repayment Calculator App](https://mortgage-repayment-calculator-main-blond.vercel.app/)
 
 ## My process
 
