@@ -1,4 +1,5 @@
 import './Calculator.css';
+import Icon from '../assets/images/icon-calculator.svg'
 
 function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, setTerm, rate, setRate, type, setMortgageType, monthlyTotal, setMonthlyTotal, totalRepayment, setTotalRepayment}) {
 
@@ -79,7 +80,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
 
           <div className="form-section">
             <button className="submit-btn">
-              <img className='calculator-icon' src="../assets/images/icon-calculator.svg" alt="calculator icon"/>
+              <img className='calculator-icon' src={Icon} alt="calculator icon"/>
               Calculate Repayments
             </button>
           </div>

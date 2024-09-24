@@ -1,4 +1,5 @@
 import './Results.css'
+import EmptyImg from '../assets/images/illustration-empty.svg';
 
 function Results({submitted, monthlyTotal, totalRepayment}) {
   
@@ -9,7 +10,7 @@ function Results({submitted, monthlyTotal, totalRepayment}) {
   return (
     <>
       <div style={{display: submitted ? "none" : "block"}} className="results results-empty">
-        <img src="../assets/images/illustration-empty.svg" alt="Results empty image" className='results-empty-img'/>
+        <img src={EmptyImg} alt="Results empty image" className='results-empty-img'/>
         <h2 className='results-heading' id="results-empty-heading">Results shown here</h2>
         <p className='results-paragraph' id="results-empty-paragraph">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
       </div>
