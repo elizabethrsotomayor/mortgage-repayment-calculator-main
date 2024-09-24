@@ -57,7 +57,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
             </div>
             <div className="form-section">
               <label htmlFor="mortgage-rate" className="form-labels">Interest Rate</label>
-              <label data-domain="%" className="static-overlay-labels term-rate-label">
+              <label data-domain="%" className="static-overlay-labels term-rate-label rate-label">
               <input type="number" className="text-fields text-field-term text-field-rate" id="interest-rate" value={rate} onChange={(e) => setRate(e.target.value)} required/>
               </label>
             </div>

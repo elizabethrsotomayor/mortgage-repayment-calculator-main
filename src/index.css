@@ -21,10 +21,6 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   font-family: 'PlusJakartaSans-Medium';
 }
@@ -58,4 +54,13 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+@media screen and (min-width: 52rem) {
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

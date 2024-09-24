@@ -1,10 +1,46 @@
+.attribution a {
+    text-decoration: underline;
+}
+
+.card {
+    display: flex;
+}
+
+@media screen and (max-width: 52rem){
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: -2px;
+    }
+
+    .attribution {
+        background-color: hsl(202, 55%, 16%);
+        margin-top: 0;
+        color: white;
+    }
+
+    .attribution a {
+        color: white;
+    }
+}
+
 @media screen and (min-width: 52rem) {
     .card {
         width: 55vw;
-        display: flex;
         align-self: center;
         justify-content: space-between;
         background-color: white;
         border-radius: 1rem;
+        position: relative;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .attribution a {
+        color: black
     }
 }

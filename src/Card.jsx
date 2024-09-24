@@ -32,6 +32,12 @@ function Card() {
           setTotalRepayment={setTotalRepayment} />
         <Results submitted={submitted} monthlyTotal={monthlyTotal} totalRepayment={totalRepayment}/>
       </div>
+      <footer role="contentinfo">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/elizabethrsotomayor">Elizabeth Sotomayor</a>.
+      </div>
+    </footer>
     </>
   )
 }
