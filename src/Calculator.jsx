@@ -40,7 +40,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
           <input type="reset" value="Clear All" onClick={resetForm} className='clear-all-btn'/>
         </div>
 
-        <form onSubmit={handleSubmit} action="" method="get" className="mortgage-form">
+        <form onSubmit={handleSubmit} action="javascript:void(0);" method="get" className="mortgage-form">
 
           <div className="form-section">
             <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
