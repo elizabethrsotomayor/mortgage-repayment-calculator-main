@@ -57,7 +57,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
               </label>
             </div>
             <div className="form-section">
-              <label htmlFor="mortgage-rate" className="form-labels">Interest Rate</label>
+              <label htmlFor="interest-rate" className="form-labels">Interest Rate</label>
               <label data-domain="%" className="static-overlay-labels term-rate-label rate-label">
               <input type="number" className="text-fields text-field-term text-field-rate" id="interest-rate" value={rate} onChange={(e) => setRate(e.target.value)} required/>
               </label>
@@ -68,11 +68,11 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
             <fieldset className='mortgage-type-radio-btns'>
               <legend className="form-labels">Mortgage Type</legend>
               <div className={type === "repayment" ? "radio-btns radio-btn-active" : "radio-btns"}>
-                <input type="radio" name="mortgage-type" value="repayment" className={type === "repayment" ? "active-radio" : ""} onChange={(e) => setMortgageType(e.target.value)} checked={type === "repayment"}/>
+                <input type="radio" name="mortgage-type" value="repayment" className={type === "repayment" ? "active-radio" : ""} onChange={(e) => setMortgageType(e.target.value)} checked={type === "repayment"} id="repayment"/>
                 <label htmlFor='repayment' className="mortgage-type-label"> Repayment</label>
               </div>
               <div className={type === "interest-only" ? "radio-btns radio-btn-active" : "radio-btns"}>
-                <input type="radio" name="mortgage-type" value="interest-only" className={type === "interest-only" ? "active-radio" : ""} onChange={(e) => setMortgageType(e.target.value)} checked={type === "interest-only"}/>
+                <input type="radio" name="mortgage-type" value="interest-only" className={type === "interest-only" ? "active-radio" : ""} onChange={(e) => setMortgageType(e.target.value)} checked={type === "interest-only"} id="interest-only"/>
                 <label htmlFor='interest-only' className='mortgage-type-label'> Interest Only</label>
               </div>
             </fieldset>
