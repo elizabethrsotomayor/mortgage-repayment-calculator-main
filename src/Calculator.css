@@ -275,7 +275,8 @@ input[type=number]::-webkit-outer-spin-button {
         background-image: linear-gradient(to right, white 0 75%, hsl(61, 70%, 52%) 50% 100%);
     }
 
-    input[number]:user-invalid {
+    /* CUSTOM INPUT VALIDATION ON DESKTOP */
+    .text-field:user-invalid {
         border: 2px solid red;
     }
 
@@ -289,19 +290,22 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .text-field-amount:user-invalid {
+        border: 2px solid red;
         background-image: linear-gradient(to right, red 0% 10%, white 10% 100%);
     }
 
     .text-field-term:user-invalid {
+        border: 2px solid red;
         background-image: linear-gradient(to right, white 0 60%, red 50% 100%);
     }
 
     .text-field-rate:user-invalid {
+        border: 2px solid red;
         background-image: linear-gradient(to right, white 0 75%, red 50% 100%);
     }
 
-    .mortgage-type-radio-btns:user-invalid + span::before {
+    /* .radio-btns:user-invalid + span::after {
         color: red;
         content: "This field is required";
-    }
+    } */
 }

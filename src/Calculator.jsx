@@ -1,10 +1,16 @@
 import './Calculator.css';
 import Icon from '../assets/images/icon-calculator.svg'
+import { useForm } from 'react-hook-form';
 
 function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, setTerm, rate, setRate, type, setMortgageType, monthlyTotal, setMonthlyTotal, totalRepayment, setTotalRepayment}) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   // Handle submission of calculator form
-  const handleSubmit = (event) => {    
+  const submitForm = (event) => {    
     event.preventDefault();
     setSubmit(true);    
     
@@ -40,7 +46,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
           <input type="reset" value="Clear All" onClick={resetForm} className='clear-all-btn'/>
         </div>
 
-        <form onSubmit={handleSubmit} action="javascript:void(0);" method="get" className="mortgage-form">
+        <form onSubmit={handleSubmit(submitForm)} action="javascript:void(0);" method="get" className="mortgage-form">
 
           <div className="form-section">
             <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
@@ -76,8 +82,8 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
               </div>
               <div className={type === "interest-only" ? "radio-btns radio-btn-active" : "radio-btns"}>
                 <input type="radio" name="mortgage-type" value="interest-only" className={type === "interest-only" ? "active-radio" : ""} onChange={(e) => setMortgageType(e.target.value)} checked={type === "interest-only"} id="interest-only"/>
+                {/* <span></span> */}
                 <label htmlFor='interest-only' className='mortgage-type-label'> Interest Only</label>
-                <span></span>
               </div>
             </fieldset>
           </div>
