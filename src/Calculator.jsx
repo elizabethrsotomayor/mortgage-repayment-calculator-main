@@ -3,15 +3,15 @@ import Icon from '../assets/images/icon-calculator.svg'
 import { useForm } from 'react-hook-form';
 
 function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, setTerm, rate, setRate, type, setMortgageType, monthlyTotal, setMonthlyTotal, totalRepayment, setTotalRepayment}) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset
-  } = useForm();  
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  //   reset
+  // } = useForm();  
 
   // Handle submission of calculator form
-  const submitForm = (event) => {    
+  const handleSubmit = (event) => {    
     event.preventDefault();
     setSubmit(true);    
     
@@ -47,7 +47,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
           <input type="reset" value="Clear All" onClick={resetForm} className='clear-all-btn'/>
         </div>
 
-        <form onSubmit={handleSubmit(submitForm)} action="javascript:void(0);" method="get" className="mortgage-form">
+        <form onSubmit={handleSubmit} action="javascript:void(0);" method="get" className="mortgage-form">
 
           <div className="form-section">
             <label htmlFor="mortgage-amount" className="form-labels">Mortgage Amount</label>
@@ -58,8 +58,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
               id="mortgage-amount" 
               value={mortgageAmt} 
               onChange={(e) => setMortgageAmt(e.target.value)} 
-              required
-              {...register('amount', { required: true, min: 1000, max: 2000000 })} />
+              required />
             <span></span>
             </label>            
           </div>
@@ -74,8 +73,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
                 id="mortgage-term" 
                 value={term} 
                 onChange={(e) => setTerm(e.target.value)} 
-                required
-                {...register('term', { required: true, min: 5, max: 40 })}/>
+                required/>
               <span></span>
               </label>
             </div>
@@ -88,8 +86,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
                 id="interest-rate" 
                 value={rate} 
                 onChange={(e) => setRate(e.target.value)} 
-                required
-                {...register('interest', { required: true, min: 1, max: 11 })}/>
+                required/>
               <span></span>
               </label>
             </div>
@@ -106,8 +103,7 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
                   className={type === "repayment" ? "active-radio" : ""} 
                   onChange={(e) => setMortgageType(e.target.value)} 
                   checked={type === "repayment"} 
-                  id="repayment" 
-                  {...register('mortgagetype', { required: true })} />
+                  id="repayment" />
                 <label htmlFor='repayment' className="mortgage-type-label"> Repayment</label>
               </div>
               <div className={type === "interest-only" ? "radio-btns radio-btn-active" : "radio-btns"}>
@@ -118,15 +114,10 @@ function Calculator({submitted, setSubmit, mortgageAmt, setMortgageAmt, term, se
                   className={type === "interest-only" ? "active-radio" : ""} 
                   onChange={(e) => setMortgageType(e.target.value)} 
                   checked={type === "interest-only"} 
-                  id="interest-only"
-                  {...register('mortgagetype', { required: true })}/>
+                  id="interest-only" />
                 <label htmlFor='interest-only' className='mortgage-type-label'> Interest Only</label>
               </div>
             </fieldset>
-            {
-              errors.mortgagetype && <p className='error_p'>This field is required</p>
-            }
-           {console.log(errors.mortgagetype)}
           </div>
 
           <div className="form-section">
