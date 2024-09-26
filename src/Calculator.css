@@ -280,6 +280,22 @@ input[type=number]::-webkit-outer-spin-button {
         border: 2px solid red;
     }
 
+    /* TODO: Figure out how to turn static overlay label white when invalid input */
+    /* .static-overlay-labels:has(+ .text-field:user-invalid) {
+        color: white !important;
+    } */
+
+    .error-label {
+        color: white !important
+    }
+    .error_p {
+        color: red;
+    }
+
+    .text-field:user-invalid~label {
+        color: white !important
+    }
+
     input:user-invalid + span::after {
         content: "This field is required";
         color: red;
