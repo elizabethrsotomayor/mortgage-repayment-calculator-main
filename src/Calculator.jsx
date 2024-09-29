@@ -40,6 +40,7 @@ function Calculator() {
 
     return (
       <>
+      <div className='container'>
       <div className="calculator-container">
 
         <div className="heading-clear-container">
@@ -140,6 +141,7 @@ function Calculator() {
       </div>
       <div className="right-container">
         <Results inputs={inputs}/>
+      </div>
       </div>
     </>
   )

@@ -192,6 +192,11 @@ input[type=number]::-webkit-outer-spin-button {
 /* DESKTOP STYLES */
 /********************/
 @media screen and (min-width: 52rem) {
+    .container {
+        display: flex;
+        flex-basis: 100%;
+    }
+    
     .calculator-container {
         display: flex;
         flex-direction: column;
