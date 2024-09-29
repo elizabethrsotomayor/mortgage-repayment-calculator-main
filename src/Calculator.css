@@ -276,16 +276,16 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     /* CUSTOM INPUT VALIDATION ON DESKTOP */
-    .text-field:user-invalid {
+    /* .text-field:user-invalid {
         border: 2px solid red;
-    }
+    } */
 
     /* TODO: Figure out how to turn static overlay label white when invalid input */
     /* .static-overlay-labels:has(+ .text-field:user-invalid) {
         color: white !important;
     } */
 
-    .error-label {
+    /* .error-label {
         color: white !important
     }
     .error_p {
@@ -318,10 +318,40 @@ input[type=number]::-webkit-outer-spin-button {
     .text-field-rate:user-invalid {
         border: 2px solid red;
         background-image: linear-gradient(to right, white 0 75%, red 50% 100%);
-    }
+    } */
 
     /* .radio-btns:user-invalid + span::after {
         color: red;
         content: "This field is required";
     } */
+
+    .error-p {
+        display: block;
+        color: red;
+        margin-bottom: 0.5rem;
+    }
+
+    .error-label::after {
+        color: white;
+    }
+
+    .error-input {
+        border: 2px solid red;
+    }
+
+    .error-input:focus {
+        border: 2px solid red;
+    }
+
+    .text-field-amount.error-input, .text-field-amount.error-input:focus {
+        background-image: linear-gradient(to right, red 0% 10%, white 10% 100%);
+    }
+
+    .text-field-term.error-input, .text-field-term.error-input:focus {
+        background-image: linear-gradient(to right, white 0 60%, red 50% 100%);
+    }
+
+    .text-field-rate.error-input, .text-field-rate.error-input:focus {
+        background-image: linear-gradient(to right, white 0 75%, red 50% 100%);
+    }
 }
